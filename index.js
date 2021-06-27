@@ -813,6 +813,7 @@ startGame.addEventListener("click",()=>{
          if(score == 10)
          {
             result.innerHTML = "<h1>You Won! Congo!";
+            startGame.style.display = "block";
             startGame.addEventListener("click",()=>{
                 location.reload();
              });
