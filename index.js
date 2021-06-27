@@ -746,6 +746,14 @@ let i=0;
 getquestion();
 function getquestion()
 {
+    if(score == 10)
+    {
+       result.innerHTML = "<h1>You Won! Congo!";
+       startGame.style.display = "block";
+       startGame.addEventListener("click",()=>{
+           location.reload();
+        });
+    }
     if(gameOver == true || i==10)
     {
         return;
@@ -810,14 +818,7 @@ startGame.addEventListener("click",()=>{
    location.reload();
 })
          }
-         if(score == 10)
-         {
-            result.innerHTML = "<h1>You Won! Congo!";
-            startGame.style.display = "block";
-            startGame.addEventListener("click",()=>{
-                location.reload();
-             });
-         }
+       
        
      });
     app.appendChild(optionD);
